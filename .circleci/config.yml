@@ -1,0 +1,14 @@
+version: 2.1
+jobs:
+  doc_publish:
+    requires: [~commit]
+    docker:
+      - image: cimg/python:3.12.1
+    steps:
+      - checkout
+      - run: |
+        pip install -r requirements.txt
+        mkdocs
+        # TODO: Setup gh auth?
+        mkdocs gh-deploy
+

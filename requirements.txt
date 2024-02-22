@@ -1,0 +1,5 @@
+mkdocs
+mkdocs-redirects
+mkdocs-pymdownx-material-extras
+markdown-include
+jinja2
