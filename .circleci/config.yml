@@ -1,7 +1,7 @@
 version: 2.1
 jobs:
   doc_publish:
-    filter:
+    filters:
       branches:
         only: main
     docker:
