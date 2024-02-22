@@ -1,9 +1,6 @@
 version: 2.1
 jobs:
   doc_publish:
-    filters:
-      branches:
-        only: main
     docker:
       - image: cimg/python:3.12.1
     steps:
@@ -17,4 +14,7 @@ jobs:
 workflows:
   on_commit:
     jobs:
-      - doc_publish
+      - doc_publish:
+          filters:
+            branches:
+              only: main
